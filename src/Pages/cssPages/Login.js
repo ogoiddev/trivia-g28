@@ -1,0 +1,104 @@
+import styled from 'styled-components';
+import back from '../../images/back.jpeg';
+
+export const Container = styled.div`
+  align-items: center;
+  background-color: ${(props) => props.theme.main};
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  * {
+    flex-shrink: 1;
+  }
+
+  & .btn-theme {
+    background-color: ${(props) => props.theme.accent};
+    width: 100%;
+    height: 34px;
+    font-size: 18px;
+    font-weight: 600;
+    color: ${(props) => props.theme.green};
+    border: none;
+  }
+
+  & .logo-trivia {
+    max-width: 50%;
+    margin: 30px;
+    animation: shake infinite 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  }
+  
+  @keyframes shake {
+
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
+  
+`;
+
+export const ContainerForm = styled.div`
+  align-items: center;
+  background-color: ${(props) => props.theme.primary};
+  background-image: url${back};
+  color: ${(props) => props.theme.main};
+  display: flex;
+  height: 430px;
+  justify-content: center;
+  width: 350px;
+`;
+
+export const Form = styled.form`
+
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-between;
+  min-height: 300px;
+  text-align: center;
+  width: 70%;
+
+  & label {
+    height: 40px;
+    width: 100%;
+    font-weight: 800;
+  }
+  
+  & input {
+    height: 100%;
+    padding: 5px 10px;
+    width: 100%;
+    margin-top: 12px;
+  }
+
+  & .btn {
+    background-color: ${(props) => props.theme.accent};
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: ${(props) => props.theme.green};
+    margin-top: 18px;
+    border: none;
+  
+    &:disabled {
+      color: #f11;
+      font-weight: 700;
+    }
+  }
+  
+`;
