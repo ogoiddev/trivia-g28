@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const ContainerAlt = styled.div`
-display: flex;
-flex-direction: column;
-margin: 0 20px;
-font-size:600px;
-align-items: center;
-
-  
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  font-size:600px;
+  align-items: center;
 `;
 
 export const Buttons = styled.button`

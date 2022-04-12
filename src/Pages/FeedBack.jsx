@@ -52,6 +52,7 @@ class FeedBack extends Component {
             </span>
           </span>
           <button
+            className="btn"
             onClick={ () => {
               const { history, dispatch } = this.props;
               dispatch(questionIndex(0));
@@ -64,6 +65,7 @@ class FeedBack extends Component {
             Play Again
           </button>
           <button
+            className="btn"
             onClick={ () => {
               const { history } = this.props;
               history.push('/ranking');

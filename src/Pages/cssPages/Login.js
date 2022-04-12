@@ -16,12 +16,17 @@ export const Container = styled.div`
 
   & .btn-theme {
     background-color: ${(props) => props.theme.accent};
-    width: 100%;
-    height: 34px;
+    width: 130px;
+    height: 24px;
     font-size: 18px;
     font-weight: 600;
     color: ${(props) => props.theme.green};
     border: none;
+    border-radius: 0 0 10px 0;
+    z-index: 1;
+    position: absolute;
+    top: 100px;
+    left: 0;
   }
 
   & .logo-trivia {

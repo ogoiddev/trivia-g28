@@ -9,6 +9,7 @@ const Container = styled.div`
   width: 100%;
   position: absolute;
   top: 0;
+  padding: 0 15px;
 
 
   & img{
@@ -24,8 +25,8 @@ const Container = styled.div`
     justify-content: space-between;
   }
 
-  & p{
-    color: white;
+  & p , span {
+    color: ${({ theme }) => theme.main};
     font-size: 26px;
   }
 

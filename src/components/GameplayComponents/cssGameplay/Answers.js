@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 const ContainerAns = styled.div`
-
-  margin-top: 100px;
-
+  
   & .head {
     display: flex;
     flex-direction: row-reverse;
@@ -22,17 +20,20 @@ const ContainerAns = styled.div`
 
   & .question {
     display: flex;
-    background-color: #031029;
-    color: white;
+    background-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.main};
     height: 100px;
     align-items: center;
     justify-content: center;
-    margin: 5px 20px;
-  
-  & p {
-    font-size: 18px;
+    margin: 20px;
+
+    & p {
+      font-size: 18px;
+      width: 100%;
+      text-align: center;
     }
   }
+
 `;
 
 export default ContainerAns;

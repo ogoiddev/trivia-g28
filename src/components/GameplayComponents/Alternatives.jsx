@@ -35,14 +35,6 @@ class Alternatives extends Component {
     }, THIRTY);
   }
 
-  sortListOfQuestions = () => {
-    const { correctAnswer, incorrectAnswers } = this.props;
-    this.setState({
-      alternatives: [correctAnswer, ...incorrectAnswers]
-        .sort(() => Math.random() - NUMBER_SORT),
-    });
-  }
-
   handleClick = (event) => {
     if (event.target.id === 'correct-answer') {
       this.handleScore();
@@ -57,6 +49,14 @@ class Alternatives extends Component {
       isDisabled: true,
       nextQuestion: false,
       firstQuestion: false,
+    });
+  }
+
+  sortListOfQuestions = () => {
+    const { correctAnswer, incorrectAnswers } = this.props;
+    this.setState({
+      alternatives: [correctAnswer, ...incorrectAnswers]
+        .sort(() => Math.random() - NUMBER_SORT),
     });
   }
 

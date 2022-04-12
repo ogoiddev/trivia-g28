@@ -1,11 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
-body{
-  background-color:var(--main-color);
-}`;
-
-export const Container = styled.div`
+const Container = styled.div`
 margin-top: 24px;
 text-align: center;
 
@@ -19,3 +14,5 @@ text-align: center;
   }
 
 `;
+
+export default Container;
