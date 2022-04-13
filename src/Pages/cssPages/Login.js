@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { FaTools } from 'react-icons/fa';
 import back from '../../images/back.jpeg';
 
 export const Container = styled.div`
@@ -78,7 +79,7 @@ export const Form = styled.form`
 
   display: flex;
   flex-direction: column;
-  height: 70%;
+  height: 75%;
   justify-content: space-between;
   min-height: 300px;
   text-align: center;
@@ -103,7 +104,7 @@ export const Form = styled.form`
     height: 40px;
     font-size: 18px;
     font-weight: 600;
-    color: ${(props) => props.theme.green};
+    color: ${({ theme }) => theme.green};
     margin-top: 18px;
     border: none;
   
@@ -117,4 +118,12 @@ export const Form = styled.form`
     }
   }
   
+`;
+
+export const BtnIcon = styled(FaTools)`
+  font-size: 2.5rem;
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 
+    100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  color: ${({ theme }) => theme.main};
+  margin-top: 35px;
 `;

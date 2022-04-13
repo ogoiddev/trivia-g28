@@ -101,15 +101,14 @@ class Home extends React.Component {
               >
                 Entrar
               </button>
-              <button
-                className="btn config"
+              <S.BtnIcon
                 name="config"
                 type="button"
                 data-testid="btn-settings"
                 onClick={ this.clickHandler }
               >
                 Configurações
-              </button>
+              </S.BtnIcon>
 
             </div>
           </S.Form>
