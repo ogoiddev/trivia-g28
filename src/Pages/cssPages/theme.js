@@ -4,6 +4,7 @@ export const lightTheme = {
   blueLight: '#aac8ff',
   accent: '#FFCD29',
   green: '#0D2206',
+  fontAnswer: '#f00',
 };
 
 export const darkTheme = {
@@ -12,4 +13,5 @@ export const darkTheme = {
   blueLight: '#aac8ff',
   accent: '#FFCD29',
   green: '#0D2206',
+  fontAnswer: '#f00',
 };

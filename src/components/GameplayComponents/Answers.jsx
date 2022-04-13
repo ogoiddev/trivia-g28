@@ -17,14 +17,15 @@ class Answers extends Component {
     return (
       <>
         <ContainerAns>
-          <div className="head0">
+          <div className="container">
             <div className="head">
-              <Timer />
+              <Timer className="timer" />
               <p data-testid="question-category">{category}</p>
+              <p>Tema da pergunta: </p>
             </div>
-          </div>
-          <div className="question">
-            <p data-testid="question-text">{question}</p>
+            <div className="question">
+              <p data-testid="question-text">{question}</p>
+            </div>
           </div>
         </ContainerAns>
         <Alternatives

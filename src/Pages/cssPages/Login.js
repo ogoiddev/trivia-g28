@@ -27,6 +27,12 @@ export const Container = styled.div`
     position: absolute;
     top: 100px;
     left: 0;
+
+    &:hover {
+      background-color: ${(props) => props.theme.primary};
+      color: ${(props) => props.theme.main};
+      transition: 0.5s;
+    }
   }
 
   & .logo-trivia {
@@ -61,6 +67,7 @@ export const ContainerForm = styled.div`
   background-color: ${(props) => props.theme.primary};
   background-image: url${back};
   color: ${(props) => props.theme.main};
+  border-radius: 3px;
   display: flex;
   height: 430px;
   justify-content: center;
@@ -71,7 +78,7 @@ export const Form = styled.form`
 
   display: flex;
   flex-direction: column;
-  height: 80%;
+  height: 70%;
   justify-content: space-between;
   min-height: 300px;
   text-align: center;
@@ -103,6 +110,10 @@ export const Form = styled.form`
     &:disabled {
       color: #f11;
       font-weight: 700;
+    }
+
+    &:active {
+      transform: translate(1px, 1px)
     }
   }
   

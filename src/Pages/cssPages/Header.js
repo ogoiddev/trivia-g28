@@ -27,7 +27,7 @@ const Container = styled.div`
 
   & p , span {
     color: ${({ theme }) => theme.main};
-    font-size: 26px;
+    font-size: 1.5rem;
   }
 
 `;

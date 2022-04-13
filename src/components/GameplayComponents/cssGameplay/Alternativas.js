@@ -16,11 +16,20 @@ export const Buttons = styled.button`
   margin-top: 3px;
   cursor: pointer;
   border: 2px solid lightgrey;
+  font-weight: 800;
+  font-size: 1.3rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   &:disabled {
     cursor: default;
     border: 3px solid ${(props) => (`${props.id}` === 'correct-answer'
     ? 'rgb(6, 240, 15)' : 'rgb(255, 0, 0)')};
+    background-color: ${(props) => (`${props.id}` === 'correct-answer'
+    ? 'rgb(6, 240, 15)' : 'rgba(255, 0, 0, 5%)')};
+    color: #f00;
   }
 `;
 
@@ -30,12 +39,27 @@ export const ProxButton = styled.div`
   margin: 0 20px;
   font-size:600px;
   align-items: center;
+  
 
 & button {
-  margin-top: 20px;
-  width: 250px;
-  height: 50px;
-  background-color: #FFCD29;
-  border: 2px solid #FFCD29;
-  cursor: pointer;
-}`;
+    cursor: pointer;
+    background-color: ${({ theme }) => theme.primary};
+    width: 250px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.main};
+    margin-top: 18px;
+    border: none;
+    position: absolute;
+  
+    &:disabled {
+      color: #f11;
+      font-weight: 700;
+    }
+
+    &:active {
+      transform: translate(1px, 1px)
+    }
+  }
+`;
