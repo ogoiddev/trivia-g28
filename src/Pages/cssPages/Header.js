@@ -23,6 +23,7 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     padding: 0 8px;
+    color: ${({ theme }) => theme.primary};
   }
   
   & img{
@@ -37,19 +38,17 @@ const Container = styled.div`
     height: 95%;
     margin: 0 20px;
     align-items: center;
+    color: ${({ theme }) => theme.main};
     
     & p {
       margin-left: 35px;
+
       @media (max-width: 768px) {
         font-size: 100%;
         transition: 1s;
       }
     }
 
-  }
-
-
-    
   }
   
   @media (max-width: 768px) {
@@ -65,17 +64,12 @@ const Container = styled.div`
     
   }
   
-  & .name {
-    color: ${({ theme }) => theme.main};
-  }
-  
   & p , span {
-    color: ${({ theme }) => theme.green};
+    
     font-size: 1.5rem;
     font-weight: bold;
     
   }
-  
-  `;
+`;
 
 export default Container;
