@@ -12,24 +12,70 @@ const Container = styled.div`
   padding: 0 15px;
 
 
+  & .pontos-container {
+    background-color: ${({ theme }) => theme.main};
+    border-radius: 5px;
+    font-family: monospace;
+    text-align: center;
+    width: 150px;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+  }
+  
   & img{
     border-radius: 50%;
     width: 50px;
     height: 50px;
-}
-
-  & div{
+  }
+  
+  & .name-container {
     display: flex;
-    width: 100%;
+    width: 95%;
+    height: 95%;
     margin: 0 20px;
-    justify-content: space-between;
+    align-items: center;
+    
+    & p {
+      margin-left: 35px;
+      @media (max-width: 768px) {
+        font-size: 100%;
+        transition: 1s;
+      }
+    }
+
   }
 
-  & p , span {
+
+    
+  }
+  
+  @media (max-width: 768px) {
+    
+    
+    & span {
+      display: none;
+    }
+    
+    & span {
+      margin: 30px;
+    }
+    
+  }
+  
+  & .name {
     color: ${({ theme }) => theme.main};
-    font-size: 1.5rem;
   }
-
-`;
+  
+  & p , span {
+    color: ${({ theme }) => theme.green};
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+  }
+  
+  `;
 
 export default Container;

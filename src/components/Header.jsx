@@ -8,23 +8,30 @@ class Header extends React.Component {
     const { gravatarImg, name, score } = this.props;
     return (
       <Container>
-        <img
-          src={ gravatarImg }
-          alt={ name }
-          data-testid="header-profile-picture"
-        />
-        <div>
-          <p data-testid="header-player-name">
+        <div className="name-container">
+          <img
+            src={ gravatarImg }
+            alt={ name }
+            data-testid="header-profile-picture"
+          />
+          <p
+            className="name"
+            data-testid="header-player-name"
+          >
             {
               `${name}, o jogo começou. Você tem 30s por pergunta...`
             }
           </p>
+
+        </div>
+        <div className="pontos-container">
+
           <span>
-            {'Pontos: _ '}
-            <span data-testid="header-score">
-              {score}
-            </span>
+            Pontos:
           </span>
+          <p data-testid="header-score">
+            {score}
+          </p>
         </div>
       </Container>
     );

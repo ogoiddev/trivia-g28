@@ -4,10 +4,10 @@ const ContainerAns = styled.div`
   display: flex;
   flex-direction: column;
   align-self: center;
-  max-width: 90%;
-  justify-content: center;
-  
+  width: 90%;
+  justify-content: center;  
 
+  
   .container {
     background-color: ${({ theme }) => theme.main};
     align-items: center;
@@ -16,35 +16,49 @@ const ContainerAns = styled.div`
     justify-content: center;
     width: 100%;
     margin: 30px auto;
+    
   }
-
+  
   & .head {
     display: flex;
     align-items: center;
-    flex-direction: row-reverse;
-    justify-content: space-around;
+    justify-content: space-between;
     color: ${({ theme }) => theme.primary};
-    width: 90%;
+    width: 100%;
     
-    & p {
-      font-size: 20px;
-      font-weight: bold;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      
+      & span {
+        margin: 30px;
+      }
     }
-    
+
+    & p {
+      background-color: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.main};
+      padding: 13px;
+      border-radius: 5px;
+      flex-shrink: 1;
+    }
     
   }
 
   .timer {
     color: ${({ theme }) => theme.green};
     border-radius: 50%;
-    height: 50px;
+    height: 55px;
+    width: 55px;
+    font-size: 20px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
     background-color: ${({ theme }) => theme.accent};
+    
 
     & span {
+      width: 100%;
 
     }
   }

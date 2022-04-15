@@ -44,11 +44,10 @@ class Timer extends Component {
     const { timer } = this.state;
     const { className } = this.props;
     return (
-      <p className={ className }>
+      <span className={ className }>
         {timer}
-        <span>.s</span>
-
-      </p>
+        .s
+      </span>
     );
   }
 }

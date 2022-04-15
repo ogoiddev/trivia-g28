@@ -93,6 +93,7 @@ class Home extends React.Component {
             <div className="btn-group">
 
               <button
+                name="enter"
                 className="btn enter"
                 type="submit"
                 data-testid="btn-play"
@@ -103,7 +104,7 @@ class Home extends React.Component {
               </button>
               <S.BtnIcon
                 name="config"
-                type="button"
+                type="submit"
                 data-testid="btn-settings"
                 onClick={ this.clickHandler }
               >

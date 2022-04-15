@@ -15,6 +15,14 @@ export const Container = styled.div`
     flex-shrink: 1;
   }
 
+  & .btn-group {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
   & .btn-theme {
     background-color: ${(props) => props.theme.accent};
     width: 130px;
@@ -72,18 +80,24 @@ export const ContainerForm = styled.div`
   display: flex;
   height: 430px;
   justify-content: center;
-  width: 350px;
-`;
+  width: 300px;
+  transition: 1s;
+  
+  @media (max-width: 700px) {
+    width: 95%;
+    transition: 1s;
+  }
+  `;
 
 export const Form = styled.form`
 
   display: flex;
   flex-direction: column;
-  height: 75%;
+  height: 85%;
   justify-content: space-between;
   min-height: 300px;
   text-align: center;
-  width: 70%;
+  width: 90%;
 
   & label {
     height: 40px;

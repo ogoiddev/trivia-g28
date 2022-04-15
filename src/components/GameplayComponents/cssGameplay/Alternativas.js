@@ -19,8 +19,15 @@ export const Buttons = styled.button`
   font-weight: 800;
   font-size: 1.3rem;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    transition: 1s;
+  }
+
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 2px 9px #111;
+    transition: 0.3s;
   }
 
   &:disabled {

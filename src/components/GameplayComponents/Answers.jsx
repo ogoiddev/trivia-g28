@@ -19,9 +19,12 @@ class Answers extends Component {
         <ContainerAns>
           <div className="container">
             <div className="head">
+              <p>
+                Tema da pergunta:
+                {' '}
+                {category}
+              </p>
               <Timer className="timer" />
-              <p data-testid="question-category">{category}</p>
-              <p>Tema da pergunta: </p>
             </div>
             <div className="question">
               <p data-testid="question-text">{question}</p>
